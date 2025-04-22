@@ -91,15 +91,16 @@ export default function Appbar(props) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='fixed' color='inherit' elevation={0}>
         <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
+        <IconButton sx={{ display: { xs: 'flex', md: 'none' } }} onClick={handleDrawerToggle} edge="start" color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
         <a href='/' style={{ textDecoration: 'none', color: 'inherit' }}>
           <Box component="img" src={Logo} sx={{ padding: 0, width: 80, display: { xs: 'none', md: 'flex' } }} alt="Your logo." />
           </a>
           <Typography sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Typography>
 
 
-          <IconButton sx={{ display: { xs: 'flex', md: 'none' } }} onClick={handleDrawerToggle} edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+          
 
           <Box component="img" src={Logo} alt="Logo" sx={{ height: 40, position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: { xs: 'flex', md: 'none' } }} />
 
