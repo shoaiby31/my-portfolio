@@ -22,7 +22,7 @@ const GradientIconButton = styled(IconButton)(({ theme }) => ({
 
 const GitHubButton = () => {
   return (
-    <GradientIconButton>
+    <GradientIconButton component="a" href="https://github.com/shoaiby31" target="_blank" rel="noopener noreferrer">
       <GitHubIcon color='primary' />
     </GradientIconButton>
   );
