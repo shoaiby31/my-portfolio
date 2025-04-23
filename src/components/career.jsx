@@ -3,7 +3,7 @@ import React from 'react'
 
 function Career() {
     return (
-        <Box padding={{ xs:3, sm:3, md:5, lg:5, xl:5}}>
+        <Box padding={{ xs:2, sm:2, md:5, lg:5, xl:5}}>
             <Grid container spacing={0} sx={{ borderRadius:3, borderWidth: '1px', borderStyle: 'solid', borderColor: 'text.secondary' }}>
                 <Grid size={{ xs: 12, sm: 12, md: 4, lg: 3, xl: 3 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', padding: 3 }}>

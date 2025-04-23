@@ -40,7 +40,7 @@ const Contact = () => {
     };
     return (
         <Box id='contact'>
-            <Box paddingX={{ xs: 3, md: 5 }} paddingTop={5}>
+            <Box paddingX={{ xs: 2, md: 5 }} paddingTop={5}>
                 <Divider />
             </Box>
             <Typography variant='h1' sx={{
@@ -51,7 +51,7 @@ const Contact = () => {
             <Grid container>
                 <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
                     <Card elevation={0}>
-                        <CardContent sx={{ paddingX: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}>
+                        <CardContent sx={{ paddingX: { xs: 2, sm: 3, md: 5, lg: 5, xl: 5 } }}>
                             <Box component="form" ref={form} onSubmit={sendEmail} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                                 {status === 'success' && (
                                     <Alert severity="success" sx={{ mt: 2 }}>

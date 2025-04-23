@@ -5,7 +5,7 @@ import { Box, Typography, Card, CardMedia, CardContent, Grid, Divider } from '@m
 const Aboutme = () => {
   return (
     <Box id='about'>
-      <Box paddingX={{xs: 3, md:5}}>
+      <Box paddingX={{xs: 2, md:5}}>
         <Typography variant="h4" sx={{ fontWeight: 'bold' }}>About Me</Typography>
       </Box>
       <Grid container spacing={0} sx={{ paddingX: 3 }}>

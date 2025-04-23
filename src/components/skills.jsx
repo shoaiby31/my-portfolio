@@ -43,7 +43,7 @@ const SkillCard = ({ icon, title, description }) => (
 
 const Skills = () => {
     return (
-        <Box id="skills" paddingX={{ xs: 3, sm: 3, md: 5, lg: 5, xl: 5 }}>
+        <Box id="skills" paddingX={{ xs: 2, sm: 2, md: 5, lg: 5, xl: 5 }}>
             <Divider />
             <Typography variant="h4" sx={{ fontWeight: 'bold', paddingY: 2 }}>My Skills</Typography>
             <Typography variant="subtitle1" mb={3}>

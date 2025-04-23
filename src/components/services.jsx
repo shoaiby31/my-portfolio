@@ -28,7 +28,7 @@ const serviceItems = [
 ]
 function Services() {
     return (
-        <Box id='services' sx={{ paddingX: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}>
+        <Box id='services' sx={{ paddingX: { xs: 2, sm: 2, md: 5, lg: 5, xl: 5 } }}>
             <Typography variant="h4" sx={{ fontWeight: 'bold', paddingY: 2 }}>My Services</Typography>
             <Grid container spacing={3} >
                 {serviceItems.map((item, key) => (

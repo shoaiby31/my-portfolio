@@ -27,18 +27,18 @@ const Experience = () => {
     <Box id='experience'>
       <MotionBox initial={{ opacity: 0, rotateX: -90 }} whileInView={{ opacity: 1, rotateX: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }} viewport={{ once: true }} sx={{ mt: 6, perspective: 1000 }}>
-        <Box paddingX={{ xs: 3, md: 5 }} paddingBottom={{xs: 1, md: 2}}>
+        <Box paddingX={{ xs: 2, md: 5 }} paddingBottom={{xs: 1, md: 2}}>
           <Divider />
         </Box>
         <Grid container spacing={1}>
           <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }}>
             <Card elevation={0}>
-              <CardContent sx={{ paddingX: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}>
+              <CardContent sx={{ paddingX: { xs: 2, sm: 2, md: 5, lg: 5, xl: 5 } }}>
                 <Typography variant="h4" sx={{ fontWeight: 'bold' }}>My Experience 💼</Typography>
 
               </CardContent>
               {experiences.map((item, key) => (
-                <CardContent key={key} sx={{ paddingX: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}>
+                <CardContent key={key} sx={{ paddingX: { xs: 2, sm: 2, md: 5, lg: 5, xl: 5 } }}>
                   <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                     {item.number}. {item.title}
                   </Typography>

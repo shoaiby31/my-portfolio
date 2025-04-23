@@ -30,7 +30,7 @@ function Header() {
                 </Grid>
                 <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }} >
                     <Card elevation={0}>
-                        <CardContent sx={{ paddingTop: 5, paddingX: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}>
+                        <CardContent sx={{ paddingTop: 5, paddingX: { xs: 2, sm: 2, md: 5, lg: 5, xl: 5 } }}>
                             <Typography sx={{ fontWeight: 'bold', typography: { xs: 'h4', sm: 'h3', md: 'h3', lg: 'h3', xl: 'h1' }, color: 'text.secondary' }}>Hi there <span>👋</span> I'm {skills[currentSkillIndex]} </Typography>
                             <Typography textAlign={'justify'} variant="body1" sx={{ typography: { xs: 'body1', sm: 'button', md: 'caption', lg: 'body2', xl: 'h6' }, paddingTop: 3 }}>Building a successful product is a challenge. I bring expertise in user experience design, interfaces, web development, and AgriTech.</Typography>
                         </CardContent>
