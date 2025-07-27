@@ -35,10 +35,13 @@ function Header() {
                             <Typography textAlign={'justify'} variant="body1" sx={{ typography: { xs: 'body1', sm: 'button', md: 'caption', lg: 'body2', xl: 'h6' }, paddingTop: 3 }}>Building a successful product is a challenge. I bring expertise in user experience design, interfaces, web development, and AgriTech.</Typography>
                         </CardContent>
                         <CardActions sx={{ paddingX: 5, paddingTop: 2 }}>
-                            <Button variant='contained' endIcon={<DownloadIcon sx={{ color: 'white' }} />} color='info' sx={{
-                                borderRadius: 20, color:'white',
-                                backgroundImage: 'linear-gradient(to top left,hsl(315, 93.80%, 44.30%),rgb(104, 70, 253))', textTransform: 'none'
-                            }} size="large">Resume</Button>
+                            <a href="/assets/shoaib-resume.pdf" download>
+                                <Button variant='contained' endIcon={<DownloadIcon sx={{ color: 'white' }} />} color='info' sx={{
+                                    borderRadius: 20, color: 'white',
+                                    backgroundImage: 'linear-gradient(to top left,hsl(315, 93.80%, 44.30%),rgb(104, 70, 253))', textTransform: 'none'
+                                }} size="large">Resume</Button>
+                            </a>
+
                             <LinkedInButton />
                             <GitHubButton />
                         </CardActions>
