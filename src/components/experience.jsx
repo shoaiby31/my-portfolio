@@ -16,7 +16,7 @@ const experiences = [
     number: 2,
     title: 'Full-Stack Web & Mobile App Developer',
     place: 'New-IOP, Mansehra, Pakistan',
-    duration: 'Jul 2020 - Present',
+    duration: 'Jul 2021 - Present',
     description:
       'Developed scalable web and mobile applications using React.js, React Native, Firebase, Node.js, and other modern technologies for various clients.'
   }
