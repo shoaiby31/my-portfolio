@@ -23,6 +23,7 @@ import pic from "../assets/pic.png";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import FeaturedProject from "../components/FeaturedProject";
+import Footer from "../components/footer";
 
 const Projects = () => {
   const featuredProject = projects.find((project) => project.featured);
@@ -33,6 +34,7 @@ const Projects = () => {
   ];
 
   return (
+    <>
     <Box
       sx={{
         py: { xs: 5, md: 8 },
@@ -768,6 +770,8 @@ const Projects = () => {
 
       </Container>
     </Box>
+          <Footer/>
+</>
   );
 };
 

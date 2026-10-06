@@ -181,13 +181,13 @@ const Skills = () => {
         </Typography>
 
         <Typography
-          variant="h2"
-          component="h2"
+          variant="h4"
+          component="h4"
           sx={{
             fontWeight: 800,
             fontSize: {
               xs: "2.2rem",
-              md: "3.2rem",
+              md: "2.8rem",
             },
             lineHeight: 1.15,
             mb: 2,
@@ -197,10 +197,9 @@ const Skills = () => {
         </Typography>
 
         <Typography
-          variant="h6"
+          variant="body1"
           color="text.secondary"
           sx={{
-            maxWidth: 760,
             lineHeight: 1.7,
             fontWeight: 400,
           }}

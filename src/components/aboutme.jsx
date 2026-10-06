@@ -8,7 +8,6 @@ import {
   CardMedia,
   CardContent,
   Grid,
-  Divider,
   Chip,
 } from "@mui/material";
 
@@ -20,12 +19,31 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import SchoolIcon from "@mui/icons-material/School";
 
 const Aboutme = () => {
+  const education = [
+    {
+      title: "Business Intelligence and Analytics (Power BI)",
+      institution:
+        "Pak-Austria Fachhochschule: Institute of Applied Sciences and Technology",
+      result: "Percentage: 92%",
+    },
+    {
+      title: "Bachelor of Science in Computer Science",
+      institution: "Hazara University Dhodial, Mansehra",
+      result: "CGPA: 3.67/4.00",
+    },
+    {
+      title: "Diploma of Associate Engineering (DAE) in Computer Information Technology",
+      institution: "Government College of Technology, Attock",
+      result: "Percentage: 80%",
+    },
+  ];
+
   return (
     <Box
       id="about"
       sx={{
         px: { xs: 2, sm: 3, md: 5, lg: 7 },
-        py: { xs: 7, md: 10 },
+        py: { xs: 7, md: 5 },
       }}
     >
       {/* Section Header */}
@@ -49,13 +67,13 @@ const Aboutme = () => {
         </Typography>
 
         <Typography
-          variant="h2"
-          component="h2"
+          variant="h4"
+          component="h4"
           sx={{
             fontWeight: 800,
             fontSize: {
               xs: "2.2rem",
-              md: "3.2rem",
+              md: "2.9rem",
             },
             lineHeight: 1.15,
             mb: 2,
@@ -65,10 +83,9 @@ const Aboutme = () => {
         </Typography>
 
         <Typography
-          variant="h6"
+          variant="body1"
           color="text.secondary"
           sx={{
-            maxWidth: 760,
             lineHeight: 1.7,
             fontWeight: 400,
           }}
@@ -79,21 +96,24 @@ const Aboutme = () => {
         </Typography>
       </Box>
 
-      {/* Main About Content */}
-      <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
+      {/* Main About Section */}
+      <Grid
+        container
+        spacing={{ xs: 4, md: 6 }}
+        alignItems="center"
+      >
         {/* Image */}
         <Grid size={{ xs: 12, md: 5 }}>
           <Card
             elevation={0}
             sx={{
-              maxWidth: 450,
+              maxWidth: 500,
               mx: "auto",
               borderRadius: 5,
               overflow: "hidden",
               border: "1px solid",
               borderColor: "divider",
               backgroundColor: "background.paper",
-              position: "relative",
             }}
           >
             <Box
@@ -117,7 +137,7 @@ const Aboutme = () => {
           </Card>
         </Grid>
 
-        {/* Content */}
+        {/* About Content */}
         <Grid size={{ xs: 12, md: 7 }}>
           <Card
             elevation={0}
@@ -132,7 +152,7 @@ const Aboutme = () => {
                 sx={{
                   lineHeight: 1.9,
                   fontSize: { xs: "1rem", md: "1.05rem" },
-                  mb: 4,
+                  mb: 3,
                 }}
               >
                 Hi, I’m <strong>Shoaib Yousaf</strong>, a dedicated and
@@ -149,7 +169,7 @@ const Aboutme = () => {
                 sx={{
                   lineHeight: 1.9,
                   fontSize: { xs: "1rem", md: "1.05rem" },
-                  mb: 4,
+                  mb: 3,
                 }}
               >
                 I work with technologies such as React, React Native,
@@ -177,7 +197,7 @@ const Aboutme = () => {
               </Typography>
 
               {/* Areas of Expertise */}
-              <Box sx={{ mb: 4 }}>
+              <Box>
                 <Typography
                   variant="h6"
                   sx={{
@@ -226,88 +246,129 @@ const Aboutme = () => {
                   />
                 </Box>
               </Box>
-
-              {/* Education */}
-              <Divider sx={{ mb: 3 }} />
-
-              <Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 1,
-                    mb: 2,
-                  }}
-                >
-                  <SchoolIcon color="primary" />
-
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      fontWeight: 700,
-                    }}
-                  >
-                    Education
-                  </Typography>
-                </Box>
-
-                <Box sx={{ mb: 2.5 }}>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{
-                      fontWeight: 600,
-                    }}
-                  >
-                    Bachelor of Science in Computer Science
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mt: 0.5 }}
-                  >
-                    Hazara University Dhodial, Mansehra
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontStyle: "italic", mt: 0.3 }}
-                  >
-                    Year of Passing: 2020
-                  </Typography>
-                </Box>
-
-                <Box>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{
-                      fontWeight: 600,
-                    }}
-                  >
-                    Diploma of Associate Engineering (DAE) in Computer
-                    Information Technology
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mt: 0.5 }}
-                  >
-                    Government College of Technology, Attock
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontStyle: "italic", mt: 0.3 }}
-                  >
-                    Year of Passing: 2016
-                  </Typography>
-                </Box>
-              </Box>
             </CardContent>
           </Card>
+        </Grid>
+
+        {/* Education - Full Width */}
+        <Grid size={{ xs: 12 }}>
+          <Box sx={{ mt: { xs: 2, md: 1 } }}>
+
+            {/* Education Heading */}
+            <Box sx={{ mb: 4 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1.2,
+                  mb: 1,
+                }}
+              >
+                <SchoolIcon color="primary" sx={{ fontSize: 30 }} />
+
+                <Typography
+                  variant="h4"
+                  component="h3"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: {
+                      xs: "1.8rem",
+                      md: "2.2rem",
+                    },
+                  }}
+                >
+                  Education
+                </Typography>
+              </Box>
+
+              <Typography
+                color="text.secondary"
+                sx={{
+                  lineHeight: 1.7,
+                }}
+              >
+                My academic background combines computer science with
+                business intelligence and information technology.
+              </Typography>
+            </Box>
+
+            {/* Education Cards */}
+            <Grid container spacing={3}>
+              {education.map((item, index) => (
+                <Grid
+                  key={item.title}
+                  size={{
+                    xs: 12,
+                    md: 4,
+                  }}
+                >
+                  <Card
+                    elevation={0}
+                    sx={{
+                      height: "100%",
+                      p: { xs: 2.5, md: 3 },
+                      borderRadius: 3,
+                      border: "1px solid",
+                      borderColor: "divider",
+                      backgroundColor: "background.paper",
+                      transition:
+                        "transform 0.3s ease, box-shadow 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: 4,
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 42,
+                        height: 42,
+                        borderRadius: 2,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mb: 2.5,
+                        backgroundColor: "action.hover",
+                        color: "primary.main",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </Box>
+
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: 700,
+                        lineHeight: 1.4,
+                        mb: 1.5,
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{
+                        lineHeight: 1.7,
+                        mb: 2,
+                      }}
+                    >
+                      {item.institution}
+                    </Typography>
+
+                    <Chip
+                      label={item.result}
+                      size="small"
+                      color="primary"
+                      variant="outlined"
+                    />
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Grid>
       </Grid>
     </Box>

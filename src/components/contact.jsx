@@ -64,7 +64,9 @@ const Contact = () => {
       id="contact"
       sx={{
         px: { xs: 2, sm: 3, md: 5, lg: 7 },
-        py: { xs: 7, md: 10 },
+        py: { xs: 1, md: 1 },
+        pb: { xs: 5, md: 5 },
+
       }}
     >
       {/* Section Divider */}
@@ -91,16 +93,17 @@ const Contact = () => {
         </Typography>
 
         <Typography
-          variant="h2"
-          sx={{
-            typography: {
-              xs: "h4",
-              sm: "h3",
-              md: "h2",
-            },
-            fontWeight: 800,
-            mb: 2,
-          }}
+          variant="h4"
+            component="h4"
+            sx={{
+              fontWeight: 800,
+              fontSize: {
+                xs: "2.2rem",
+                md: "2.8rem",
+              },
+              lineHeight: 1.15,
+              mb: 2,
+            }}
         >
           Let's Connect
         </Typography>
@@ -287,24 +290,12 @@ const Contact = () => {
               minHeight: 500,
               position: "relative",
               overflow: "hidden",
-              borderRadius: 4,
-              border: "1px solid",
-              borderColor: "divider",
+              
               backgroundColor: "background.paper",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
 
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: 4,
-                background:
-                  "linear-gradient(90deg, #3b82f6, #a729ff)",
-              },
             }}
           >
             <CardMedia

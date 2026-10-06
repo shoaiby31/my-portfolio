@@ -206,7 +206,7 @@ const Experience = () => {
       id="experience"
       sx={{
         px: { xs: 2, sm: 3, md: 5, lg: 7 },
-        py: { xs: 7, md: 10 },
+        py: { xs: 1, md: 1 },
       }}
     >
       <MotionBox
@@ -236,13 +236,13 @@ const Experience = () => {
           </Typography>
 
           <Typography
-            variant="h2"
-            component="h2"
+            variant="h4"
+            component="h4"
             sx={{
               fontWeight: 800,
               fontSize: {
                 xs: "2.2rem",
-                md: "3.2rem",
+                md: "2.8rem",
               },
               lineHeight: 1.15,
               mb: 2,
@@ -252,10 +252,9 @@ const Experience = () => {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="body1"
             color="text.secondary"
             sx={{
-              maxWidth: 760,
               lineHeight: 1.7,
               fontWeight: 400,
             }}

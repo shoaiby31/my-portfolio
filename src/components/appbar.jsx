@@ -5,7 +5,6 @@ import {
   Toolbar,
   Button,
   IconButton,
-  
   Divider,
   List,
   ListItem,
@@ -13,6 +12,7 @@ import {
   ListItemText,
   Drawer,
 } from "@mui/material";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -21,7 +21,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeThemeMode } from "../redux/slices/theme/index";
 
 import Logo from "../assets/logo.png";
-import { useLocation } from "react-router-dom";
+
+import {
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 const drawerWidth = 260;
 
@@ -34,12 +38,12 @@ const pages = [
   {
     id: 2,
     name: "Skills",
-    to: "#skills",
+    to: "/#skills",
   },
   {
     id: 3,
     name: "Experience",
-    to: "#experience",
+    to: "/#experience",
   },
   {
     id: 4,
@@ -49,17 +53,17 @@ const pages = [
   {
     id: 5,
     name: "Services",
-    to: "#services",
+    to: "/#services",
   },
   {
     id: 6,
     name: "About",
-    to: "#about",
+    to: "/#about",
   },
   {
     id: 7,
     name: "Contact",
-    to: "#contact",
+    to: "/#contact",
   },
 ];
 
@@ -69,6 +73,7 @@ export default function Appbar(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const themeMode = useSelector((state) => state.mode.value);
   const dispatch = useDispatch();
@@ -77,13 +82,54 @@ export default function Appbar(props) {
     setMobileOpen((prev) => !prev);
   };
 
+  const handleNavigation = (to) => {
+    setMobileOpen(false);
+
+    if (to === "/") {
+      navigate("/");
+      window?.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    if (to.startsWith("/#")) {
+      const sectionId = to.substring(2);
+
+      if (location.pathname !== "/") {
+        navigate(to);
+      } else {
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+
+      return;
+    }
+
+    navigate(to);
+  };
+
   const isActive = (item) => {
     if (item.to === "/") {
-      return location.pathname === "/";
+      return location.pathname === "/" && !location.hash;
     }
 
     if (item.to === "/projects") {
       return location.pathname === "/projects";
+    }
+
+    if (item.to.startsWith("/#")) {
+      return (
+        location.pathname === "/" &&
+        location.hash === item.to.substring(1)
+      );
     }
 
     return false;
@@ -128,10 +174,9 @@ export default function Appbar(props) {
             sx={{ mb: 0.5 }}
           >
             <ListItemButton
-              component="a"
-              href={item.to}
+              component="button"
               selected={isActive(item)}
-              onClick={handleDrawerToggle}
+              onClick={() => handleNavigation(item.to)}
               sx={{
                 borderRadius: 2,
                 px: 2,
@@ -218,12 +263,16 @@ export default function Appbar(props) {
           {/* ================= LOGO ================= */}
 
           <Box
-            component="a"
-            href="/"
+            component="button"
+            onClick={() => handleNavigation("/")}
             sx={{
               display: "flex",
               alignItems: "center",
               textDecoration: "none",
+              border: 0,
+              background: "none",
+              padding: 0,
+              cursor: "pointer",
 
               ml: {
                 xs: 1,
@@ -231,6 +280,7 @@ export default function Appbar(props) {
               },
             }}
           >
+            {/* Desktop logo */}
             <Box
               component="img"
               src={Logo}
@@ -296,8 +346,10 @@ export default function Appbar(props) {
               return (
                 <Button
                   key={item.id}
-                  component="a"
-                  href={item.to}
+                  component="button"
+                  onClick={() =>
+                    handleNavigation(item.to)
+                  }
                   sx={{
                     minWidth: "auto",
 
