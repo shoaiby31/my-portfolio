@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
 import { setDarkMode } from './redux/slices/theme/index'
-
+import Projects from "./pages/Projects";
 function App() {
   const dispatch = useDispatch();
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -33,6 +33,7 @@ function App() {
           <Appbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </Router>
       </Paper>
