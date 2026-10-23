@@ -60,7 +60,7 @@ const Projects = () => {
             borderRadius: { xs: 4, md: 6 },
             px: { xs: 3, sm: 5, md: 7 },
             py: { xs: 5, md: 7 },
-            mb: { xs: 7, md: 10 },
+            mb: { xs: 5, md: 8 },
             background: (theme) =>
               `linear-gradient(
                 135deg,
@@ -664,8 +664,8 @@ const Projects = () => {
           <Box
             sx={{
               mb: {
-                xs: 8,
-                md: 11,
+                xs: 5,
+                md: 8,
               },
             }}
           >

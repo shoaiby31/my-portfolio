@@ -12,6 +12,19 @@ const projects = [
     githubUrl: "https://github.com/shoaiby31/Smart-Educator",
     featured: true,
   },
+    {
+    id: "golgappa-junction",
+    title: "Golgappa Junction 1",
+    type: "Web App",
+    status: "Completed",
+    description:
+      "A responsive, multi-page restaurant website concept for an Indian street-food business in Melbourne, Australia. Includes a food menu, gallery, restaurant information, and contact details, with a focus on presenting the business professionally online.",
+    technologies: ["HTML", "CSS", "JavaScript", "Netlify"],
+    image: "/images/projects/golgappa-junction.png",
+    liveUrl: "https://golgappajunction1.netlify.app/",
+    githubUrl: "#",
+    featured: false,
+  },
 
   {
     id: "learning-quiz",
